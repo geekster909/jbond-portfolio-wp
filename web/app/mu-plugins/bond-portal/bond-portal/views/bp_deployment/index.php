@@ -20,9 +20,9 @@
         <div class="bp-deployment-outer-wrapper" id="js-option">
             <div class="bp-deployment-inner-wrapper">
                 <h2>Select an enviroment to deploy:</h2>
-                <a href="admin.php?page=bp_deployment&action=deploy&environment=staging" class="js-bp-deployment-type button button-hero" data-type="netlify-staging" <?php echo !$settings->netlify_staging_webhook ? 'disabled' : '' ?>>Staging</a>
-                <a href="admin.php?page=bp_deployment&action=deploy&environment=production" class="js-bp-deployment-type button button-hero" data-type="netlify-production" <?php echo !$settings->netlify_production_webhook ? 'disabled' : '' ?>>Production</a>
-                <?php if ($settings->netlify_staging_badge || $settings->netlify_production_badge) : ?>
+                <a href="admin.php?page=bp_deployment&action=deploy&environment=staging" class="js-bp-deployment-type button button-hero" data-type="staging" <?php echo !$settings->staging_webhook ? 'disabled' : '' ?>>Staging</a>
+                <a href="admin.php?page=bp_deployment&action=deploy&environment=production" class="js-bp-deployment-type button button-hero" data-type="production" <?php echo !$settings->production_webhook ? 'disabled' : '' ?>>Production</a>
+                <?php if ($settings->staging_badge || $settings->production_badge) : ?>
                     <br />
                     <br />
                     <br />
@@ -36,13 +36,13 @@
                         </div>
                         <div class="bp-deployment-status-body">
                             <div>
-                            <?php if ($settings->netlify_staging_badge) : ?>
-                                <img class="netlify-staging-badge" src="<?php echo $settings->netlify_staging_badge; ?>"></h3>
+                            <?php if ($settings->staging_badge) : ?>
+                                <img class="staging-badge" src="<?php echo $settings->staging_badge; ?>"></h3>
                             <?php endif; ?>
                             </div>
                             <div>
-                            <?php if ($settings->netlify_production_badge) : ?>
-                                <img class="netlify-production-badge" src="<?php echo $settings->netlify_production_badge; ?>">
+                            <?php if ($settings->production_badge) : ?>
+                                <img class="production-badge" src="<?php echo $settings->production_badge; ?>">
                             <?php endif; ?>
                             </div>
                         </div>

@@ -12,10 +12,10 @@ class Bp_deployment extends Bp_settings
             $settings = Bp_settings::getBpSettings();
             $settings = $settings[0];
 
-            if ($this->type === 'staging' && !!$settings->netlify_staging_webhook) {
-                $webhookUrl = $settings->netlify_staging_webhook;
-            } else if ($this->type === 'production' && !!$settings->netlify_production_webhook) {
-                $webhookUrl = $settings->netlify_production_webhook;
+            if ($this->type === 'staging' && !!$settings->staging_webhook) {
+                $webhookUrl = $settings->staging_webhook;
+            } else if ($this->type === 'production' && !!$settings->production_webhook) {
+                $webhookUrl = $settings->production_webhook;
             }
 
             if ($webhookUrl) {

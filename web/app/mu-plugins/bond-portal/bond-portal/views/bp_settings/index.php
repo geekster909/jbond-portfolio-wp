@@ -16,47 +16,47 @@
     <div class="bp-admin-box">
         <form id="bp-dealer-form" action="?page=bp_settings&action=saveBpSettings" method="post">
             <div class="bp-deployment-inner-wrapper" style="text-align: left;">
-                <h2>Netlify Settings</h2>
+                <h2>Bond Portal Settings</h2>
                 <div class="acf-field acf-field-text">
                     <div class="acf-label">
-                        <label for="netlify-staging-webhook">Netlify Staging Webhook</label>
+                        <label for="staging-webhook">Staging Webhook</label>
                     </div>
                     <div class="acf-input">
                         <div class="acf-input-wrap">
-                            <input id="netlify-staging-webhook" type="text" name="netlify-staging-webhook" value="<?php echo $settings->netlify_staging_webhook; ?>">
+                            <input id="staging-webhook" type="text" name="staging-webhook" value="<?php echo $settings->staging_webhook; ?>">
                         </div>
                     </div>
                 </div>
                 <br />
                 <div class="acf-field acf-field-text">
                     <div class="acf-label">
-                        <label for="netlify-staging-badge">Netlify Staging Badge</label>
+                        <label for="staging-badge">Staging Badge</label>
                     </div>
                     <div class="acf-input">
                         <div class="acf-input-wrap">
-                            <input id="netlify-staging-badge" type="text" name="netlify-staging-badge" value="<?php echo $settings->netlify_staging_badge; ?>">
+                            <input id="staging-badge" type="text" name="staging-badge" value="<?php echo $settings->staging_badge; ?>">
                         </div>
                     </div>
                 </div>
                 <br />
                 <div class="acf-field acf-field-text">
                     <div class="acf-label">
-                        <label for="netlify-production-webhook">Netlify Production Webhook</label>
+                        <label for="production-webhook">Production Webhook</label>
                     </div>
                     <div class="acf-input">
                         <div class="acf-input-wrap">
-                            <input id="netlify-production-webhook" type="text" name="netlify-production-webhook" value="<?php echo $settings->netlify_production_webhook; ?>">
+                            <input id="production-webhook" type="text" name="production-webhook" value="<?php echo $settings->production_webhook; ?>">
                         </div>
                     </div>
                 </div>
                 <br />
                 <div class="acf-field acf-field-text">
                     <div class="acf-label">
-                        <label for="netlify-production-badge">Netlify Production Badge</label>
+                        <label for="production-badge">Production Badge</label>
                     </div>
                     <div class="acf-input">
                         <div class="acf-input-wrap">
-                            <input id="netlify-production-badge" type="text" name="netlify-production-badge" value="<?php echo $settings->netlify_production_badge; ?>">
+                            <input id="production-badge" type="text" name="production-badge" value="<?php echo $settings->production_badge; ?>">
                         </div>
                     </div>
                 </div>

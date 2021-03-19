@@ -20,10 +20,10 @@
 				(
 					id INT NOT NULL AUTO_INCREMENT, 
 					PRIMARY KEY(id), 
-					netlify_staging_webhook VARCHAR(255),
-					netlify_staging_badge VARCHAR(255),
-					netlify_production_webhook VARCHAR(255),
-					netlify_production_badge VARCHAR(255)
+					staging_webhook VARCHAR(255),
+					staging_badge VARCHAR(255),
+					production_webhook VARCHAR(255),
+					production_badge VARCHAR(255)
 				)
 			 ";
 
@@ -33,10 +33,10 @@
 				$querystr = "
 					INSERT INTO _bp_settings 
 					(
-						netlify_staging_webhook,
-						netlify_staging_badge,
-						netlify_production_webhook,
-						netlify_production_badge
+						staging_webhook,
+						staging_badge,
+						production_webhook,
+						production_badge
 					)
 					VALUES (
 						'',
@@ -74,10 +74,10 @@
 			$querystr = "
 				UPDATE _bp_settings
 				SET
-					netlify_staging_webhook = '".$data['netlify-staging-webhook']."',
-					netlify_staging_badge = '".$data['netlify-staging-badge']."',
-					netlify_production_webhook = '".$data['netlify-production-webhook']."',
-					netlify_production_badge = '".$data['netlify-production-badge']."'
+					staging_webhook = '".$data['staging-webhook']."',
+					staging_badge = '".$data['staging-badge']."',
+					production_webhook = '".$data['production-webhook']."',
+					production_badge = '".$data['production-badge']."'
 				WHERE id = 1
 			 ";
 

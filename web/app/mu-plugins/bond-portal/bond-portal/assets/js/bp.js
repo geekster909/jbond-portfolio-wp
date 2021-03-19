@@ -18,21 +18,21 @@
         return Math.floor(Math.random() * Math.floor(max));
     }
 
-    // Update Netlify Badge every 5 seconds
-    var netlifyStagingBadgeElement = $('.netlify-staging-badge');
-    var netlifyProductionBadgeElement = $('.netlify-production-badge');
+    // Update Badge every 5 seconds
+    var stagingBadgeElement = $('.staging-badge');
+    var productionBadgeElement = $('.production-badge');
 
-    if (netlifyStagingBadgeElement.length !== 0) {
-        var netlifyStagingBadgeImage = netlifyStagingBadgeElement.attr('src');
+    if (stagingBadgeElement.length !== 0) {
+        var stagingBadgeImage = stagingBadgeElement.attr('src');
         setInterval(function(){
-            netlifyStagingBadgeElement.attr('src', netlifyStagingBadgeImage + '?v=' + getRandomInt(999999));
+            stagingBadgeElement.attr('src', stagingBadgeImage + '?v=' + getRandomInt(999999));
         }, 5000);
     }
 
-    if (netlifyProductionBadgeElement.length !== 0) {
-        var netlifyProductionBadgeImage = netlifyProductionBadgeElement.attr('src');
+    if (productionBadgeElement.length !== 0) {
+        var productionBadgeImage = productionBadgeElement.attr('src');
         setInterval(function(){
-            netlifyProductionBadgeElement.attr('src', netlifyProductionBadgeImage + '?v=' + getRandomInt(999999));
+            productionBadgeElement.attr('src', productionBadgeImage + '?v=' + getRandomInt(999999));
         }, 5000);
     }
     
