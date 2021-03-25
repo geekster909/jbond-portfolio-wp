@@ -18,6 +18,14 @@
         return Math.floor(Math.random() * Math.floor(max));
     }
 
+    function parameterSeparator(string) {
+        if (string.includes('?')) {
+            return '&';
+        }
+
+        return '?';
+    }
+
     // Update Badge every 5 seconds
     var stagingBadgeElement = $('.staging-badge');
     var productionBadgeElement = $('.production-badge');
@@ -25,14 +33,14 @@
     if (stagingBadgeElement.length !== 0) {
         var stagingBadgeImage = stagingBadgeElement.attr('src');
         setInterval(function(){
-            stagingBadgeElement.attr('src', stagingBadgeImage + '?v=' + getRandomInt(999999));
+            stagingBadgeElement.attr('src', stagingBadgeImage + parameterSeparator(stagingBadgeImage) + 'v=' + getRandomInt(999999));
         }, 5000);
     }
 
     if (productionBadgeElement.length !== 0) {
         var productionBadgeImage = productionBadgeElement.attr('src');
         setInterval(function(){
-            productionBadgeElement.attr('src', productionBadgeImage + '?v=' + getRandomInt(999999));
+            productionBadgeElement.attr('src', productionBadgeImage + parameterSeparator(productionBadgeImage) + 'v=' + getRandomInt(999999));
         }, 5000);
     }
     
